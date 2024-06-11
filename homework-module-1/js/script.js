@@ -46,5 +46,24 @@ var charset2 = getCode.trim(); //remove any hidden characters generated
         disableButton(true);//if not match, run the function to disable button
 }
 }
+$(document).ready(function() {
+  // Existing jQuery code
+  
+  // Lightbox functionality
+  $('.gallery img').click(function() {
+    var src = $(this).attr('src');
+    $('.lightbox-img').attr('src', src);
+    $('#lightbox').fadeIn();
+  });
 
+  $('.close').click(function() {
+    $('#lightbox').fadeOut();
+  });
+
+  $(document).on('click', function(e) {
+    if ($(e.target).is('#lightbox')) {
+      $('#lightbox').fadeOut();
+    }
+  });
+});
 
