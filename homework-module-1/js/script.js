@@ -47,23 +47,27 @@ var charset2 = getCode.trim(); //remove any hidden characters generated
 }
 }
 $(document).ready(function() {
-  // Existing jQuery code
-  
+  // Debug log to confirm jQuery is loaded and ready
+  console.log('jQuery is ready');
+
   // Lightbox functionality
-  $('.gallery img').click(function() {
+  $('.gallery').click(function() {
     var src = $(this).attr('src');
+    console.log('Image source:', src); // Debugging log
     $('.lightbox-img').attr('src', src);
     $('#lightbox').fadeIn();
+    console.log('Lightbox should be visible now'); // Debugging log
   });
 
   $('.close').click(function() {
     $('#lightbox').fadeOut();
+    console.log('Lightbox closed'); // Debugging log
   });
 
   $(document).on('click', function(e) {
     if ($(e.target).is('#lightbox')) {
       $('#lightbox').fadeOut();
+      console.log('Lightbox closed by clicking outside'); // Debugging log
     }
   });
 });
-

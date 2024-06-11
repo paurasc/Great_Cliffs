@@ -372,6 +372,8 @@ select {
 .header {
     font-weight: bold;
 }
+
+
 #lightbox {
     display: none;
     position: fixed;
