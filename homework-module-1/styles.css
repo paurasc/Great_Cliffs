@@ -358,3 +358,17 @@ select {
 #clock{
     margin-left:10px;
 }
+
+/* Interactive table styles */
+.selected {
+    background-color: yellow; /* Change to any color you prefer for selected state */
+}
+
+.not-available {
+    background-color: grey; /* Style for not available cells */
+    cursor: not-allowed; /* Optional */
+}
+
+.header {
+    font-weight: bold;
+}
