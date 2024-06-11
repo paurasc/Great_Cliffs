@@ -361,7 +361,7 @@ select {
 
 /* Interactive table styles */
 .selected {
-    background-color: yellow; /* Change to any color you prefer for selected state */
+    background-color: rgb(7, 223, 0); /* Change to any color you prefer for selected state */
 }
 
 .not-available {
