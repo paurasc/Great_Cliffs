@@ -314,7 +314,7 @@ select {
     margin: 0px;
     padding: 0px;
     border-spacing: 0;
-    /* Remove space between cells */
+   
 }
 
 #cliffs table img {
@@ -366,7 +366,7 @@ select {
 
 .not-available {
     background-color: grey; /* Style for not available cells */
-    cursor: not-allowed; /* Optional */
+    cursor: not-allowed; 
 }
 
 .header {
@@ -409,3 +409,13 @@ select {
     cursor: pointer;
   }
   
+ 
+#activityDisplayBox {
+    border: 1px solid #000;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#activityList li {
+    list-style-type: none;
+}

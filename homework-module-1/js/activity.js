@@ -1,12 +1,26 @@
 $(document).ready(function() {
-    // Make the cells selectable
     $('td').click(function() {
         if (!$(this).hasClass('not-available') && !$(this).hasClass('header')) {
-            $(this).toggleClass('selected');
+            var activityName = $(this).text();
+            var activityIndex = $(this).index();
+            var siteName = $('th').eq(activityIndex).text();
+
+            if ($(this).hasClass('selected')) {
+                $(this).removeClass('selected');
+                $('#activityList li:contains(' + activityName + ')').remove();
+            } else {
+                $(this).addClass('selected');
+                $('#activityList').append('<li>' + activityName + ' - ' + siteName + '</li>');
+            }
+
+            if ($('#activityList li').length > 0) {
+                $('#activityDisplayBox').show();
+            } else {
+                $('#activityDisplayBox').hide();
+            }
         }
     });
 
-    // Add a cursor pointer to selectable cells
     $('td').hover(function() {
         if (!$(this).hasClass('not-available') && !$(this).hasClass('header')) {
             $(this).css('cursor', 'pointer');
